@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">bps mp</string>
+    <string name="action_settings">Settings</string>
+    <string name="song_title"></string>
+    <string name="songList_icon">songList icon</string>
+    <string name="album_cover">album cover</string>
+    <string name="previous_icon">previous icon</string>
+    <string name="stop_icon">stop icon</string>
+    <string name="pause_icon">pause icon</string>
+    <string name="play_icon">play</string>
+    <string name="next_icon">next</string>
+    <string name="repeat_icon">repeat mode</string>
+    <string name="normal_icon">normal mode</string>
+    <string name="music_icon">music icon</string>
+    <string name="volumn_down">volumn down</string>
+    <string name="volumn_up">volumn up</string>
+    <string name="second_activity">second activity</string>
+    
+    
+
+</resources>
