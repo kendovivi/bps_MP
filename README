@@ -1,0 +1,11 @@
+
+** MEDIA_PATH need to be reset to where your mp3 files are located in SongsManager.java
+
+
+check point
+
+1. show songsList
+
+2. play, pause, next, previous button
+
+3. volumn control (does not work well)
