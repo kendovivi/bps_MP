@@ -1,151 +1,120 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffbb33" 
+    
+    android:background="@drawable/background" 
      >
 
-<!-- player header -->
-<LinearLayout
-   android:id="@+id/player_header"  
-   android:layout_width="match_parent"
-   android:layout_height="46dip"
-   android:background="#5c5c5c"
-   android:gravity="top"
-   >
-   
-   <TextView
-       android:id="@+id/song_title"
-       android:layout_width="0dp"
-       android:layout_height="wrap_content"
-       android:layout_weight="1"
-       android:text="@string/song_title"
-       android:textStyle="bold"
-       android:textSize="20sp"
-       android:textColor="#fff"
-       android:paddingLeft="10dp"
-       android:layout_marginTop="10dp" />
-   
-   <ImageButton
-       android:id="@+id/songList_icon"
-       android:layout_width="40dp"
-       android:layout_height="wrap_content"
-       android:layout_marginRight="5dp"
-       android:contentDescription="@string/songList_icon"
-       android:src="@drawable/ic_songlist"
-       android:onClick="test"
-    />
-</LinearLayout>
-
-<!-- album cover -->
-<LinearLayout
-    android:id="@+id/album_cover"
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content" 
-    android:paddingTop="0dp"
-    android:paddingLeft ="0dp" 
-    android:background = "#000"
-    >
     
-    <ImageView 
-        android:layout_width="fill_parent"
+    
+<RelativeLayout
+        
+        android:id="@+id/main_top"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:contentDescription="@string/album_cover"
-        android:src="@drawable/album_rihanna"/>
-</LinearLayout>
+        android:layout_alignParentTop="true"
+        android:gravity="center" >
 
-
-<!-- footer -->
-<LinearLayout
-    android:id="@+id/player_footer"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:paddingLeft="10dp"
-    android:layout_marginTop="50dp" >
-
-    
-    <ImageButton
+     <Button
         android:id="@+id/player_previous_icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
         android:contentDescription="@string/previous_icon"
-        android:src="@drawable/ic_previous">   
-    </ImageButton>
-    
-    <ImageButton
-        android:id="@+id/player_stop_icon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:contentDescription="@string/stop_icon"
-        android:src="@drawable/ic_stop">    
-    </ImageButton>
-    
-    
-    <!-- playボタンとpauseボタンを一緒にする
-    <ImageButton
-        android:id="@+id/player_pause_icon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:contentDescription="@string/pause_icon"
-        android:src="@drawable/ic_pause">
-    </ImageButton>
-     -->
-     
-    <ImageButton 
-       android:id="@+id/player_play_icon"
-       android:layout_height="wrap_content"
-       android:layout_width="wrap_content"
-       android:layout_weight="1"
-       android:contentDescription="@string/play_icon"
-       android:src="@drawable/ic_play">
-    </ImageButton>
-    
-    <ImageButton
-       android:id="@+id/player_next_icon"
-       android:layout_height="wrap_content"
-       android:layout_width="wrap_content"
-       android:layout_weight="1"
-       android:contentDescription="@string/next_icon"
-       android:src="@drawable/ic_next">
-    </ImageButton>
-    
-    <ImageButton
+        android:background="@drawable/btn_previous">   
+    </Button>
+
+     <Button
         android:id="@+id/player_repeat_icon"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
-        android:layout_weight="1"
+        android:layout_toRightOf="@id/player_previous_icon"
         android:contentDescription="@string/repeat_icon"
-        android:src="@drawable/ic_repeat" >
-    </ImageButton>
+        android:background="@drawable/btn_repeat" >
+    </Button>
     
-    <ImageButton
+     <Button 
+       android:id="@+id/player_play_icon"
+       android:layout_height="wrap_content"
+       android:layout_width="wrap_content"
+       android:layout_toRightOf="@id/player_repeat_icon"
+       android:contentDescription="@string/play_icon"
+       android:background="@drawable/btn_play">
+    </Button>
+    
+    <Button
+       android:id="@+id/player_next_icon"
+       android:layout_height="wrap_content"
+       android:layout_width="wrap_content"
+       android:layout_toRightOf="@id/player_play_icon"
+       android:contentDescription="@string/next_icon"
+       android:background="@drawable/btn_next">
+    </Button>
+     
+    <Button
         android:id="@+id/player_normal_icon"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
-        android:layout_weight="1"
+        android:layout_toRightOf="@id/player_next_icon"
         android:contentDescription="@string/normal_icon"
-        android:src="@drawable/ic_normal">
-    </ImageButton>
+        android:background="@drawable/ic_normal">
+    </Button>
     
-</LinearLayout>
+    <Button
+       android:id="@+id/songList_icon"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_toRightOf="@id/player_normal_icon"
+       android:contentDescription="@string/songList_icon"
+       android:background="@drawable/btn_favoritelist"
+       android:onClick="test" />
 
-<LinearLayout
+
+</RelativeLayout>
+
+
+
+<!-- album cover -->
+<RelativeLayout
+    android:id="@+id/artist"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/main_top"
+    android:orientation="vertical"
+    android:layout_marginTop="20dp"
+    android:gravity="center" >
+    
+    <ImageView
+        android:id="@+id/album_cover"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/album_cover"
+        android:src="@drawable/album_rihanna"
+        />
+    
+    <TextView
+       android:id="@+id/song_title"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_below="@id/album_cover"
+       android:text="@string/song_title"
+       android:textStyle="bold"
+       android:textSize="20sp"
+       android:textColor="#BFBFBF"
+       android:layout_marginTop="10dp"
+       android:gravity="center" />
+    
+</RelativeLayout>
+
+
+
+<RelativeLayout
     android:id="@+id/player_volumn_control"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content" 
+    android:layout_alignParentBottom="true"
     android:layout_marginTop="50dp"
-    android:layout_gravity="right"
     >
-    
-    <TextView
-        android:id="@+id/volumnstr"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Volumn: " />"
 
     <ImageButton
         android:id="@+id/volumn_up_icon"
@@ -160,14 +129,15 @@
         android:id="@+id/volumn_down_icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/volumn_up_icon"
         android:contentDescription="@string/volumn_down"
         android:src="@drawable/ic_volumn_down"
         >
     </ImageButton>
-</LinearLayout>
+</RelativeLayout>
 
     
-</LinearLayout>
+</RelativeLayout>
 
 
         

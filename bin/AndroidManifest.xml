@@ -5,7 +5,7 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="8"
+        android:minSdkVersion="11"
         android:targetSdkVersion="18" />
 
     <application
@@ -15,7 +15,8 @@
         android:theme="@style/AppTheme" android:debuggable="true">
         <activity
             android:name="com.example.bpsmp.MainActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:configChanges="orientation" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -26,6 +27,7 @@
         <activity
         android:name="com.example.bpsmp.SongListActivity"
         android:label="@string/second_activity"
+        android:configChanges="orientation"
         android:parentActivityName="com.example.bpsmp.MainActivity" >
         <meta-data
             android:name="android.support.PARENT_ACTIVITY"
